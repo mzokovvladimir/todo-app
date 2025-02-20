@@ -1,0 +1,95 @@
+body {
+  transition: background 0.3s, color 0.3s;
+}
+
+body.light {
+  background: white;
+  color: black;
+}
+
+body.dark {
+  background: #242424;
+  color: white;
+}
+
+.app-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.todo-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  width: 300px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-bottom: 1px solid gray;
+  background: #333;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  cursor: grab;
+}
+
+.todo-item:active {
+  cursor: grabbing;
+}
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.task-input {
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.task-input:focus {
+  outline: none;
+}
+
+.task-date {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.todo-item.completed .task-input {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.clear-btn, .theme-btn {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  margin-top: 10px;
+}
+
+.clear-btn {
+  background: red;
+  color: white;
+}
+
+.theme-btn {
+  background: gray;
+  color: white;
+}
